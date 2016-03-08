@@ -51,7 +51,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <textarea id="compilled" class="col-md-12"></textarea>
+          <textarea id="compilled" class="col-md-12" onclick="this.focus(); this.select()"></textarea>
         </div>
       </div>
     </div>
