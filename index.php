@@ -236,7 +236,7 @@ function template_delete (&$str, $field, $space=0){
   foreach ($field as $f){
     if ($f->COLUMN_KEY != 'PRI') continue;
     $str .= '->';
-    $str .= 'where($this->_t.\''.$f->COLUMN_NAME.'\', $this->'.strtolower($f->COLUMN_NAME).')';
+    $str .= 'where($this->_t.\'.'.$f->COLUMN_NAME.'\', $this->'.strtolower($f->COLUMN_NAME).')';
     $i++;
   }
   $str .= '->delete($this->_t);';
