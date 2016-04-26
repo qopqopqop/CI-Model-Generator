@@ -208,6 +208,9 @@ function template_find(&$str, $field, $space=0){
     }
   $str .= "\n";
   $str .= "\n";
+  $str .= template_space($space*2).'if (!empty($this->_sel)) $this->db->select($this->_sel);';
+  $str .= "\n";
+  $str .= "\n";
   $str .= template_space($space*2).'if (!empty($this->_s)) $this->db->order_by($this->_s);';
   $str .= "\n";
   $str .= "\n";
