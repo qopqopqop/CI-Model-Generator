@@ -341,6 +341,8 @@ function template_var_init(&$str, $table, $field, $space=0){
   $str .= "\n";
   $str .= template_space($space).'private $_t = \''.$table.'\', // table name';
   $str .= "\n";
+  $str .= template_space($space*2).'$_sel = \'*\', // column select';
+  $str .= "\n";
   $str .= template_space($space*2).'$_s, //TODO : default table sort';
   $str .= "\n";
   $str .= template_space($space*2).'$_p = 1, // default page';
