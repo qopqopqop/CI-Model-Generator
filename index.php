@@ -332,7 +332,7 @@ function template_setter_default(&$str, $field, $space=0){
   $str .= template_space($space).'public function set__packed ($d){';
   foreach ($var_list as $v){
     $str .= "\n";
-    $str .= template_space($space*2).'if (isset($d[\''.$v.'\'])) $this->$'.$v.' = $d[\''.$v.'\'];';
+    $str .= template_space($space*2).'if (isset($d[\''.$v.'\'])) $this->'.$v.' = $d[\''.$v.'\'];';
   }
   $str .= "\n";
   $str .= template_space($space*2).'return $this;';
